@@ -31,13 +31,11 @@ def whatsapp():
             image_str=image_str,
         )
         if model_result:
-            print('ALOHAAAA')
             send_message(
                 f"Obrigado! Recebemos a sua foto! Os dados são {model_result}"
             )
             return jsonify({"message":"Flask"})
         else:
-            print('ALOHAAAA')
             send_message("Por favor, envie uma imagem!")
             return jsonify({"message":"Flask"})
     else:
